@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<div id="heading">
+    <h2>HTML Forms</h2>
+</div>
+
+<div id="user_form">
+    <form action="form_ok.jsp" method="post">
+
+        <fieldset id="user_info">
+            <legend>User Information</legend>
+            <br>
+
+            <label for="user_id">ID:</label>
+            <input type="text" name="user_id" id="user_id" required>
+            <br><br>
+
+            <label for="user_email">Email:</label>
+            <input type="text" name="user_email" id="user_email" placeholder="Example@email.com" required>
+            <br><br>
+
+            <label for="user_pwd">Password:</label>
+            <input type="password" name="user_pwd" id="user_pwd" placeholder="At least 6 characters" pattern=".{6,}"
+                   title="At least 6 or more characters" required>
+            <br><br>
+
+            <label for="user_name">Name:</label>
+            <input type="text" name="user_name" id="user_name">
+            <br><br>
+
+            <label for="user_gender">Gender:</label>
+            <input type="radio" name="user_gender" id="user_gender1" value="Male" checked>Male
+            <input type="radio" name="user_gender" id="user_gender2" value="Female">Female
+            <br><br>
+
+            <label for="user_birthday">Birthday:</label>
+            <input type="date" name="user_birthday" id="user_birthday" min="1900-01-01" max="2022-12-31">
+            <br><br>
+
+            <label for="user_phone">Phone Number:</label>
+            <input type="tel" id="user_phone" name="user_phone" placeholder="010-1234-5678"
+                   pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13">
+            <br><br>
+
+            <label for="user_stnumber">Student Number:</label>
+            <input type="text" name="user_stnumber" id="user_stnumber" placeholder="8-digit student number"
+                   minlength="8" maxlength="8">
+            <br><br>
+
+            <label for="user_undergrad">Undergraduate:</label>
+            <select name="user_undergrad" id="user_undergrad">
+                <option value="Global leadership">Global leadership</option>
+                <option value="International Study">International Study</option>
+                <option value="Management">Management</option>
+                <option value="Law">Law</option>
+                <option value="Communication">Communication</option>
+                <option value="Counseling">Counseling</option>
+                <option value="Life Science">Life Science</option>
+                <option value="Spatial Environment System">Spatial Environment System</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="C&C Design">C&C Design</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="ICT">ICT</option>
+                <option value="Language Education">Language Education</option>
+                <option value="Creative Convergence Edu.">Creative Convergence Edu.</option>
+                <option value="AI Convergence Edu.">AI Convergence Edu.</option>
+            </select>
+            <br><br>
+
+            <label for="user_introduction">Introduction</label><br>
+            <textarea name="user_introduction" id="user_introduction" cols="40" rows="10"></textarea>
+            <br><br>
+
+            <label for="user_agreement">Do you agree to upload the above?</label>
+            <input type="checkbox" name="user_agreement" id="user_agreement" value="true" required>
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <br><br>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
